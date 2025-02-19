@@ -1,0 +1,16 @@
+[project]
+name = "my-package"
+version = "0.0.1"
+description = "A sample package that installs guardrails hub validators directly with pip."
+authors = [
+    {name = "Guardrails AI", email = "contact@guardrailsai.com"}
+]
+license = {file = "LICENSE"}
+readme = "README.md"
+requires-python = ">= 3.8.1"
+dependencies = [
+    "guardrails-ai>=0.6.0",
+    "guardrails-grhub-gibberish-text==0.0.1",
+    "guardrails-grhub-regex-match==0.0.0"
+]
+
