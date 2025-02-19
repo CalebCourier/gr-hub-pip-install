@@ -1,4 +1,4 @@
-# Setup
+## Setup
 
 1. Create a virtual environment
 
@@ -49,3 +49,17 @@ guardrails hub install hub://guardrails/gibberish_text hub://guardrails/regex_ma
 ```sh
 python test.py
 ```
+
+
+## Identifying Package Names for Guardrails Hub Validators
+At the time of writing this (Feb 19, 2025), the package names in Guardrails' private pypi index are formed as follows:
+
+Given a hub url in the form of:
+`hub://{namespace}/{validator_name}`
+ 
+the package name in the private index will be:
+`{namespace}-grhub-{validator_name}`
+
+Examples:
+1. `hub://guardrails/gibberish_text` -> `guardrails-grhub-gibberish-text`
+2. `hub://tryolabs/restricttotopic` -> `tryolabs-grhub-restricttotopic`
