@@ -1,13 +1,6 @@
 # Tracking GuardrailsAI Hub Validators as Pip Dependencies
 
-## As of guardrails-ai v0.6.x
-To comment on this as whole, the first thing to note is that hub validators are not just code.  Many of them also have ML models that back them.  The reason the guardrails cli exists at all (wrt to installing from the hub) is because there are post install actions that need to occur to make the validators more usable (i.e. downloading backing models & weights, setting up barrel files for easier imports, etc.).  Some, but not all, of this, like downloading model weights, can and will happen at runtime if post install is not run, but this takes a non-trivial amount of time hence the install-time hook instead.
-
-There are ways to install the underlying pip packages themselves using only pip, but this will not run the post-install.  One workaround is to install the pip packages first, then run the hub install command afterwards.  As long as you don't pass the update flag to the hub install, it will see that the packages are already installed and only run post-install.  This still requires an API key because the packages themselves are in a private pypi registry that requires authentication.
-
-This workaround is what the code sample in this repo covers.
-
-## Workaround
+## Setup
 
 1. Create a virtual environment
 
