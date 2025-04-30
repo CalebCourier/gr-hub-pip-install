@@ -33,7 +33,7 @@ export GUARDRAILS_TOKEN=$(cat ~/.guardrailsrc| awk -F 'token=' '{print $2}' | aw
 Or you can get a new key from the hub at https://hub.guardrailsai.com/keys
 
 
-4. Setup pip env vars
+4. Setup pip environment variables
 
 ```sh
 export PIP_INDEX_URL="https://__token__:$GUARDRAILS_TOKEN@pypi.guardrailsai.com/simple"
