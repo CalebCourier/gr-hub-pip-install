@@ -7,7 +7,7 @@ There are ways to install the underlying pip packages themselves using only pip,
 
 This workaround is what the code sample in this repo covers.
 
-## Setup
+## Workaround
 
 1. Create a virtual environment
 
